@@ -122,4 +122,16 @@ list.foldLeft[List[Int]](Nil){
 val list1 = List(1,2,3,4,1,2)
 list1.foldLeft[List[Int]](Nil)((acc, element) => if (acc.contains(element)) acc else acc :+ element)
 
+for(x <- 1 to 10) println(x)
+//convert to
+1.to(10).foreach(((i) => println(i)))
+
+
+//withFilter example
+
+val newList = List(1,2,3,4,5,6,7,8,9,10)
+
+newList.withFilter(element => element == 2).map(x=>x)
+newList.filter(element => element == 2)
+
 */

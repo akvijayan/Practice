@@ -134,4 +134,9 @@ val newList = List(1,2,3,4,5,6,7,8,9,10)
 newList.withFilter(element => element == 2).map(x=>x)
 newList.filter(element => element == 2)
 
+val data = Some(1)
+
+data match {
+  case value @ Some(_) => s"$value"
+}
 */

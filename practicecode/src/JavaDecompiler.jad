@@ -1,0 +1,87 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   JavaDecompiler.scala
+
+import scala.Predef$;
+import scala.StringContext;
+import scala.runtime.BoxesRunTime;
+
+public class JavaDecompiler
+{
+
+    public String firstName()
+    {
+        return firstName;
+    }
+
+    public void firstName_$eq(String x$1)
+    {
+        firstName = x$1;
+    }
+
+    public String lastName()
+    {
+        return lastName;
+    }
+
+    public void lastName_$eq(String x$1)
+    {
+        lastName = x$1;
+    }
+
+    private String HOME()
+    {
+        return HOME;
+    }
+
+    public int age()
+    {
+        return age;
+    }
+
+    public void age_$eq(int x$1)
+    {
+        age = x$1;
+    }
+
+    public String toString()
+    {
+        return (new StringContext(Predef$.MODULE$.wrapRefArray((Object[])(new String[] {
+            "", " ", " is ", " years old"
+        })))).s(Predef$.MODULE$.genericWrapArray(((Object) (new Object[] {
+            firstName(), lastName(), BoxesRunTime.boxToInteger(age())
+        }))));
+    }
+
+    public void printHome()
+    {
+        Predef$.MODULE$.println((new StringContext(Predef$.MODULE$.wrapRefArray((Object[])(new String[] {
+            "HOME = ", ""
+        })))).s(Predef$.MODULE$.genericWrapArray(((Object) (new Object[] {
+            HOME()
+        })))));
+    }
+
+    public void printFullName()
+    {
+        Predef$.MODULE$.println(this);
+    }
+
+    public JavaDecompiler(String firstName, String lastName)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        super();
+        Predef$.MODULE$.println("the constructor begins");
+        age = 0;
+        printHome();
+        printFullName();
+        Predef$.MODULE$.println("still in the constructor");
+    }
+
+    private String firstName;
+    private String lastName;
+    private final String HOME = System.getProperty("user.home");
+    private int age;
+}

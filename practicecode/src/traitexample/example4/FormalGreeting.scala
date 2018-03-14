@@ -2,5 +2,5 @@ package traitexample.example4
 
 trait FormalGreeting {
 
-  def hello() : Int
+  def hello() : String
 }

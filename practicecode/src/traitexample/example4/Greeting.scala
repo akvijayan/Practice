@@ -7,7 +7,7 @@ class Greeting extends FormalGreeting with InformalGreeting {
   }
 }
 
-object MyObject extends App {
+object NewObject extends App {
 
   println(new Greeting().hello())
 }

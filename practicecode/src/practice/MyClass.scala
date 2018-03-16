@@ -159,4 +159,26 @@ def partialFunct(num1: String, num2: String) = {
 val newFunct = partialFunct("aasdasd", _:String)
 
 newFunct("dsaf")
+
+//call by value and call by name
+
+def something() = {
+  println("calling something")
+  1 // return value
+}
+
+def callByValue(x: Int) = {
+  println("x1=" + x)
+  println("x2=" + x)
+}
+
+def callByName(x: => Int) = {
+  println("x1=" + x)
+  println("x2=" + x)
+}
+
+println(">>>Call by value<<<")
+callByValue(something())
+println(">>>Call by name<<<")
+callByName(something())
 */

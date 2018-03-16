@@ -139,4 +139,24 @@ val data = Some(1)
 data match {
   case value @ Some(_) => s"$value"
 }
+
+
+//curied function
+
+def curiedFunct(value1: String)(value2: String): String = {
+  value1+value2
+}
+
+val funct = curiedFunct("asad")(_)
+funct("dssad")
+
+//partially applied function
+
+def partialFunct(num1: String, num2: String) = {
+  num1 + num2
+}
+
+val newFunct = partialFunct("aasdasd", _:String)
+
+newFunct("dsaf")
 */

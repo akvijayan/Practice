@@ -11,7 +11,7 @@ class Child(name: String) extends CallSuperClassConstructor(name, 0) {
   println(s"Inside Child $name and $age")
 }
 
-object MyObject extends App {
+object MySuperObject extends App {
 
   val child = new Child("Akhil")
 }

@@ -12,7 +12,7 @@ class InnerClassExample {
   }
 }
 
-object MyObject extends App {
+object MyInnerClassObject extends App {
 
   val myClass = new InnerClassExample()
 

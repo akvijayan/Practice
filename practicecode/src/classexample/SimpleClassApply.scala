@@ -20,7 +20,7 @@ object MyClassObject extends App {
   val simpleClass = SimpleClassApply("Akhil", 12)
 
   /**
-    * Here simpleClass onject will go as the parameter in the unapply method and the result will be back to the output variable.
+    * Here simpleClass object will go as the parameter in the unapply method and the result will be back to the output variable.
     * If the value is present then the case is successful otherwise next case will be executed
     */
   val result = simpleClass match {

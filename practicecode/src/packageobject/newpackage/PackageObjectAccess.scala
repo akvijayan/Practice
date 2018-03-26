@@ -1,4 +1,5 @@
-import practice.MyObject._
+package packageobject.newpackage
+
 class PackageObjectAccess {
 packageObjectVariable
 }

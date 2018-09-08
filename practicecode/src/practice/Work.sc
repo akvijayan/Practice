@@ -166,3 +166,8 @@ println(">>>Call by value<<<")
 callByValue(something())
 println(">>>Call by name<<<")
 callByName(something())
+
+
+//checking for implicit values
+implicit val myImplicit = "Akhil"
+implicitly[String]

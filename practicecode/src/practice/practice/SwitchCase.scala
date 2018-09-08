@@ -1,5 +1,7 @@
 package practice.practice
 
+import scala.annotation.switch
+
 
 class SwitchCase {
 
@@ -14,6 +16,26 @@ class SwitchCase {
 //    case _ => "Other"
 //  }
 
+//Scala compile automatically optimise pattern match based on primitive types.
+  // It creates a Jump table which directly jump to case without going to each and
+  // every case. Example:
+  (5: @switch) match {   //to be use that this create a jump table we can use @switch annotation
+    case 3 => "three"
+    case 5 => "five"
+    case _ => "Not a number"
+  }
+
+  //Another Example
+
+  case class Test(name: String)
+
+  (Test("Akhil"): @switch) match {   //There will be a warning the this cannot be optimised as it is not a primitive type
+    case Test("Akhil") => "Akhil"
+    case Test("Ravi") => "Ravi"
+    case _ => "No Name"
+  }
+
+  //But if we have only two cases in the above example then scala optimises the code to the jump table
 
 //type erasure
 val list: List[Int] = List(1,2,3,4,5)
